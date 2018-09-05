@@ -37,7 +37,7 @@ public class UfDaoTest extends AbstractTestCase {
 
 	@Test
 	public void findByIdTest() {
-		Uf uf = dao.findById(5);
+		Uf uf = dao.findById(19);
 		Assert.assertEquals("SC", uf.getNome());
 		Assert.assertNotEquals("PR", uf.getNome());
 	}
@@ -57,8 +57,6 @@ public class UfDaoTest extends AbstractTestCase {
 		manager.persist(uf);
 
 		Assert.assertTrue(dao.findByName("PP").size() == 1);
-		
-		Assert.assertTrue(dao.findByName("PP").size() > 1);
 	}
 
 	@Test
